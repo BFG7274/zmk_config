@@ -345,10 +345,10 @@
         default_layer {
                         display-name = "Base";
                         bindings = <
-   &double_layer  FUNC NUM  &kp Q       &kp W       &kp E             &kp R         &kp T                               &kp Y                &kp U          &kp I                &kp O        &kp P          &to MOUSE
-   &kp LG(SPACE)            &hml LGUI A &hml LALT S &hml LCTRL D      &hml LSHIFT F &kp G                               &kp H                &hmr RSHIFT J  &hmr RCTRL K         &hmr RALT L  &hmr RGUI SQT  &swap
-   &smart_shift 0 LSHIFT    &kp Z       &kp X       &kp C             &kp V         &kp B          &kp C_MUTE  &kp C_PP &kp N                &kp M          &comma_morph         &dot_morph   &qexcl         &smart_shift 0 LSHIFT
-   &none                    &none       &none       &lt DEBUG ESCAPE  &lt NUM SPACE &lt FUNC TAB                        &lt MOUSE RET        &lt FUNC BACKSPACE &lt DEBUG DELETE &none        &none          &none
+   &double_layer  FUNC NUM  &kp Q       &kp W       &kp E             &kp R         &kp T                               &kp Y                &kp U              &kp I                &kp O        &kp P          &to MOUSE
+   &kp LG(SPACE)            &hml LGUI A &hml LALT S &hml LCTRL D      &hml LSHIFT F &kp G                               &kp H                &hmr RSHIFT J      &hmr RCTRL K         &hmr RALT L  &hmr RGUI SQT  &swap
+   &smart_shift 0 LSHIFT    &kp Z       &kp X       &kp C             &kp V         &kp B          &kp C_MUTE  &kp C_PP &kp N                &kp M              &comma_morph         &dot_morph   &qexcl         &smart_shift 0 LSHIFT
+   &none                    &none       &none       &lt SCUT ESCAPE   &lt NUM SPACE &lt FUNC TAB                        &lt MOUSE RET        &lt SCUT BACKSPACE &lt NUM DELETE     &none        &none          &none
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
                 };
