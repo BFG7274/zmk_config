@@ -4,7 +4,7 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: hitsmaxft
+    - name: cornix-shield
       url-base: https://github.com/hitsmaxft
     - name: urob
       url-base: https://github.com/urob
@@ -16,18 +16,15 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       revision: main
-      clone-depth: 1
-      import:
-        file: app/west.yml
     - name: zmk-helpers
       remote: urob
       revision: main
-    - name: zmk-dongle-display
-      remote: hitsmaxft
-      revision: main
-      clone-depth: 1
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
+    - name: zmk-shield-cornix
+      remote: cornix-shield
+      revision: main
+
   self:
     path: config
