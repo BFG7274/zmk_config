@@ -18,3 +18,24 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
+include:
+  - board: cornix_e73
+    shield: cornix_dongle dongle_display
+    snippet: studio-rpc-usb-uart
+    artifact-name: cornix_dongle
+
+  - board: cornix_e73
+    shield: cornix_main_left
+    artifact-name: cornix_left_default
+
+  - board: cornix_e73
+    shield: cornix_ph_left
+    artifact-name: cornix_left_for_dongle
+
+  - board: cornix_e73
+    shield: cornix_right
+    artifact-name: cornix_right
+
+  - board: cornix_e73
+    shield: settings_reset
+    artifact-name: reset
