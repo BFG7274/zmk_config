@@ -25,6 +25,10 @@ manifest:
     - name: zmk-shield-cornix
       remote: cornix-shield
       revision: main
+    - name: zmk-dongle-display
+      remote: cornix-shield
+      revision: main
+      clone-depth: 1
 
   self:
     path: config
