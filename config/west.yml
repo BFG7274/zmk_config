@@ -23,7 +23,7 @@ manifest:
       revision: main
     - name: zmk-shield-cornix
       remote: cornix-shield
-      revision: v2.3
+      revision: v2.4
     - name: zmk-dongle-display
       remote: cornix-shield
       revision: main
