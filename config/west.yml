@@ -21,13 +21,9 @@ manifest:
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
-    - name: zmk-shield-cornix
-      remote: cornix-shield
-      revision: v2.4
-    - name: zmk-dongle-display
+    - name: zmk-keyboard-cornix
       remote: cornix-shield
       revision: main
-      clone-depth: 1
 
   self:
     path: config
