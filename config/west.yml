@@ -24,6 +24,18 @@ manifest:
     - name: zmk-keyboard-cornix
       remote: cornix-shield
       revision: main
+    - name: zmk-rgbled-widget
+      remote: hitsmaxft
+      revision: main
+      clone-depth: 1
+    - name: zmk-dongle-display
+      remote: hitsmaxft
+      revision: main
+      clone-depth: 1
+    - name: zmk-dongle-screen
+      remote: janpfischer
+      revision: main
+      clone-depth: 1
 
   self:
     path: config
