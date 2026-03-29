@@ -167,7 +167,7 @@
         };
 
         cb_language {
-            binding = <&kp LG(SPACE)>;
+            bindings = <&kp LG(SPACE)>;
             key-positions = <LB0 LB1>;
             layers = <BASE NUM>;
             timeout-ms = <COMBO_TERM_FAST>;
