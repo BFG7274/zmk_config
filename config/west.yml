@@ -18,7 +18,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: abb64ba316c29caddc49727ca2cac2f0ed5970c7
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
@@ -28,7 +28,7 @@ manifest:
       revision: main
     - name: zmk-keyboard-cornix
       remote: cornix-shield
-      revision: main
+      revision: v2.6.8
     - name: zmk-rgbled-widget
       remote: hitsmaxft
       revision: main
@@ -39,7 +39,7 @@ manifest:
       clone-depth: 1
     - name: zmk-dongle-screen
       remote: janpfischer
-      revision: main
+      revision: 379d012702feeb85d7ff89879408283b763dece7
       clone-depth: 1
 
   self:
