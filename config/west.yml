@@ -22,16 +22,16 @@ manifest:
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
-      revision: main
+      revision: 7e0219e170ca2b919a5162412a1e6aa2d7b712aa
     - name: zmk-tri-state
       remote: dhruvinsh
-      revision: main
+      revision: ebbc1f0ccdb51669650bb0ac3e34920d09e62400
     - name: zmk-keyboard-cornix
       remote: cornix-shield
       revision: v2.6.8
     - name: zmk-rgbled-widget
       remote: hitsmaxft
-      revision: main
+      revision: f1a8be56d37b88169fff6afc87fb92ad3bc53634
       clone-depth: 1
     - name: zmk-dongle-display
       remote: hitsmaxft
