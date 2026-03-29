@@ -166,6 +166,14 @@
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
         };
 
+        cb_language {
+            binding = <&kp LG(SPACE)>;
+            key-positions = <LB0 LB1>;
+            layers = <BASE NUM>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+        };
+
         cb_pageup {
             bindings = <&kp PG_UP>;
             key-positions = <LT2 LT3>;
@@ -345,10 +353,10 @@
         default_layer {
                         display-name = "Base";
                         bindings = <
-   &double_layer  FUNC NUM  &kp Q       &kp W       &kp E             &kp R         &kp T                               &kp Y                &kp U              &kp I                &kp O        &kp P          &to MOUSE
-   &kp LG(SPACE)            &hml LGUI A &hml LALT S &hml LCTRL D      &hml LSHIFT F &kp G                               &kp H                &hmr RSHIFT J      &hmr RCTRL K         &hmr RALT L  &hmr RGUI SQT  &swap
-   &smart_shift 0 LSHIFT    &kp Z       &kp X       &kp C             &kp V         &kp B          &kp C_MUTE  &kp C_PP &kp N                &kp M              &comma_morph         &dot_morph   &qexcl         &smart_shift 0 LSHIFT
-   &none                    &none       &none       &lt SCUT ESCAPE   &lt NUM SPACE &lt FUNC TAB                        &lt MOUSE RET        &lt SCUT BACKSPACE &lt NUM DELETE     &none        &none          &none
+                           &double_layer FUNC NUM  &kp Q        &kp W        &kp E            &kp R          &kp T                               &kp Y         &kp U              &kp I            &kp O        &kp P          &to SCUT
+                           &kp LSHIFT              &hml LGUI A  &hml LALT S  &hml LCTRL D     &hml LSHIFT F  &kp G                               &kp H         &hmr RSHIFT J      &hmr RCTRL K     &hmr RALT L  &hmr RGUI SQT  &swap
+                           &smart_shift 0 LSHIFT   &kp Z        &kp X        &kp C            &kp V          &kp B         &kp C_MUTE  &kp C_PP  &kp N         &kp M              &comma_morph     &dot_morph   &qexcl         &smart_shift 0 LSHIFT
+                           &none                   &none        &none        &lt SCUT ESCAPE  &lt NUM SPACE  &lt FUNC TAB                        &lt SCUT RET  &lt NUM BACKSPACE  &lt FUNC DELETE  &none        &none          &none
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
                 };
@@ -356,10 +364,10 @@
     num_layer {
                         display-name = "Num";
                         bindings = <
-   &to  BASE  &kp N1           &kp N2          &kp N3           &kp N4            &kp N5                            &kp PG_UP   &kp HOME   &kp UP    &kp END             &kp DEL     &kp C_VOLUME_UP
-   &kp DOT    &hml LGUI N6     &hml LALT N7    &hml LCTRL N8    &hml LSHIFT N9    &kp N0                            &kp PG_DN   &kp LEFT   &kp DOWN  &kp RIGHT           &kp CAPS    &kp C_VOLUME_DOWN
-   &kp LSHFT  &kp PLUS         &kp MINUS       &kp KP_MULTIPLY  &kp FSLH          &kp EQUAL &kp C_MUTE  &kp C_PP    &kp INS     &kp GRAVE  &kp PSCRN &kp PAUSE_BREAK     &kp KP_NUM  &kp C_MUTE
-   &trans     &trans           &trans          &trans           &trans            &trans                            &trans      &trans     &trans    &trans              &trans      &trans
+                           &to BASE   &kp N1        &kp N2        &kp N3           &kp N4          &kp N5                           &kp PG_UP  &kp HOME   &kp UP     &kp END          &kp DEL     &kp C_VOLUME_UP
+                           &kp DOT    &hml LGUI N6  &hml LALT N7  &hml LCTRL N8    &hml LSHIFT N9  &kp N0                           &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT        &kp CAPS    &kp C_VOLUME_DOWN
+                           &kp LSHFT  &kp PLUS      &kp MINUS     &kp KP_MULTIPLY  &kp FSLH        &kp EQUAL  &kp C_MUTE  &kp C_PP  &kp INS    &kp GRAVE  &kp PSCRN  &kp PAUSE_BREAK  &kp KP_NUM  &kp C_MUTE
+                           &trans     &trans        &trans        &trans           &trans          &trans                           &trans     &trans     &trans     &trans           &trans      &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
 
@@ -367,10 +375,10 @@
         func_layer {
                         display-name = "Func";
                         bindings = <
-   &to BASE    &kp F1         &kp F2         &kp F3          &kp F4            &kp F5                           &kp F18      &kp F19     &kp F20     &kp F21     &kp F22     &trans
-   &kp F11     &hml LGUI F6   &hml LALT F7   &hml LCTRL F8   &hml LSHIFT F9    &kp F10                          &kp F23      &kp LSHIFT  &kp LCTRL   &kp LALT    &kp LGUI    &trans
-   &kp F12     &kp F13        &kp F14        &kp F15         &kp F16           &kp F23  &kp C_MUTE  &kp C_PP    &kp F24      &trans      &trans      &trans      &trans      &trans
-   &none       &none          &none          &trans          &trans            &trans                           &trans       &trans      &trans      &none       &none       &none
+                           &to BASE  &kp F1        &kp F2        &kp F3         &kp F4          &kp F5                         &kp F18  &kp F19     &kp F20    &kp F21   &kp F22   &trans
+                           &kp F11   &hml LGUI F6  &hml LALT F7  &hml LCTRL F8  &hml LSHIFT F9  &kp F10                        &kp F23  &kp LSHIFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+                           &kp F12   &kp F13       &kp F14       &kp F15        &kp F16         &kp F23  &kp C_MUTE  &kp C_PP  &kp F24  &trans      &trans     &trans    &trans    &trans
+                           &none     &none         &none         &trans         &trans          &trans                         &trans   &trans      &trans     &none     &none     &none
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
                 };
@@ -379,20 +387,20 @@
     mouse_layer {
                         display-name = "Mouse";
                         bindings = <
-   &to  BASE        &none        &bt BT_SEL 1    &msc SCRL_UP        &none                  &none                           &msc SCRL_UP     &mkp MB4        &mmv MOVE_UP     &mkp MB5        &msc SCRL_LEFT  &to  BASE
-   &none            &none        &msc SCRL_LEFT  &msc SCRL_DOWN      &msc SCRL_RIGHT        &none                           &msc SCRL_DOWN   &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT &msc SCRL_RIGHT &none
-   &none            &none        &none           &none               &none                  &none     &kp C_MUTE  &kp C_PP  &none            &mkp MCLK       &mkp LCLK        &mkp RCLK       &none           &none
-   &none            &none        &none           &mkp MCLK           &mkp LCLK              &mkp RCLK                       &none            &none           &none            &none           &none           &none
+                           &to BASE  &none  &bt BT_SEL 1    &msc SCRL_UP    &none            &none                            &msc SCRL_UP    &mkp MB4        &mmv MOVE_UP    &mkp MB5         &msc SCRL_LEFT   &to BASE
+                           &none     &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none                            &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &none
+                           &none     &none  &none           &none           &none            &none      &kp C_MUTE  &kp C_PP  &none           &mkp MCLK       &mkp LCLK       &mkp RCLK        &none            &none
+                           &none     &none  &none           &mkp MCLK       &mkp LCLK        &mkp RCLK                        &none           &none           &none           &none            &none            &none
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
         };
     scut_layer {
                         display-name = "Scut";
                         bindings = <
-   &to  BASE        &none        &none           &none               &none                  &none                              &none            &kp C_MUTE  &kp C_VOLUME_UP      &kp C_PP    &none    &to  BASE
-   &none            &none        &none           &none               &none                  &none                              &none            &kp C_PREV  &kp C_VOLUME_DOWN    &kp C_NEXT  &none    &none
-   &none            &none        &none           &none               &none                  &none   &kp C_MUTE  &kp C_PP       &none            &none       &none                &none       &none    &none
-   &none            &none        &none           &none               &none                  &none                              &none            &none       &none                &none       &none    &none
+                           &to BASE  &none  &none  &none  &none  &none                                &none  &kp C_MUTE  &kp C_VOLUME_UP    &kp C_PP    &none  &to BASE
+                           &none     &none  &none  &none  &none  &kp LG(SPACE)                        &none  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT  &none  &none
+                           &none     &none  &none  &none  &none  &none          &kp C_MUTE  &kp C_PP  &none  &none       &none              &none       &none  &none
+                           &none     &none  &none  &none  &none  &none                                &none  &none       &none              &none       &none  &none
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
 
@@ -400,10 +408,10 @@
     sys_layer {
                         display-name = "Sys";
                         bindings = <
-   &to  BASE        &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3           &bt BT_SEL 4                              &none            &kp C_MUTE  &kp C_VOLUME_UP      &kp C_PP    &none    &to  BASE
-   &bt  BT_CLR      &none        &none           &none               &none                  &none                                     &none            &kp C_PREV  &kp C_VOLUME_DOWN    &kp C_NEXT  &none    &none
-   &bt  BT_CLR_ALL  &none        &none           &none               &none                  &none   &kp C_MUTE  &kp C_PP              &none            &none       &none                &none       &none    &none
-   &none            &none        &none           &none               &none                  &none                                     &none            &none       &none                &none       &none    &none
+                           &to BASE        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &none  &kp C_MUTE  &kp C_VOLUME_UP    &kp C_PP    &none  &to BASE
+                           &bt BT_CLR      &none         &none         &none         &none         &none                               &none  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT  &none  &none
+                           &bt BT_CLR_ALL  &none         &none         &none         &none         &none         &kp C_MUTE  &kp C_PP  &none  &none       &none              &none       &none  &none
+                           &none           &none         &none         &none         &none         &none                               &none  &none       &none              &none       &none  &none
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
 
