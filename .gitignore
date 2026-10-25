@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.omx/
+.codex/*
+!.codex/agents/
+!.codex/agents/**
+!.codex/skills/
+!.codex/skills/**
+.codex/skills/.system/**
+!.codex/prompts/
+!.codex/prompts/**
+
+# Local skills, documentation, and keymap drawing tools
+/skills-lock.json
+/.agents/
+/docs/
+/drawer/
+/scripts/draw_keymap.py
+/scripts/__init__.py
+/tests/test_draw_keymap.py
+/.claude/skills/grill-me
+/.claude/skills/grill-with-docs

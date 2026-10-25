@@ -18,28 +18,31 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: abb64ba316c29caddc49727ca2cac2f0ed5970c7
+      # Last main commit before endpoint API removal (6e7e0de2); dongle-display needs it.
+      revision: ac7f75b8591d39aaf3b66b9d26f26c9ed921a009
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
-      revision: 7e0219e170ca2b919a5162412a1e6aa2d7b712aa
+      revision: 7bcba18fc8df27303eb92a435d33ea870cc51f98
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: ebbc1f0ccdb51669650bb0ac3e34920d09e62400
     - name: zmk-keyboard-cornix
       remote: cornix-shield
-      revision: v2.6.8
+      # v3.0.1 (Zephyr 4.1 / qualified ZMK boards)
+      revision: b2d5712fa3ef43ccbb796d3df1d48b78d59d27df
     - name: zmk-rgbled-widget
       remote: hitsmaxft
-      revision: f1a8be56d37b88169fff6afc87fb92ad3bc53634
+      revision: a2b29334b8598d7351c1f4429c5c083b2c0a3bc5
       clone-depth: 1
     - name: zmk-dongle-display
       remote: hitsmaxft
-      revision: 379d012702feeb85d7ff89879408283b763dece7
+      revision: 2fe3ab44b3c2371ef34fb241c3b459a71cf93ed5
       clone-depth: 1
     - name: zmk-dongle-screen
       remote: janpfischer
-      revision: 0.1.2
+      # upgrade-4.1 branch; main still uses incompatible LVGL 8 Kconfig symbols.
+      revision: a8cec2626b8ea94e9a047eac1e53792980369c93
       clone-depth: 1
 
   self:

@@ -17,7 +17,7 @@
 #define MOUSE   3
 #define SCUT    4
 #define SYS     5
-#define NONE    6
+#define SYM     6
 #define DEBUG   7
 
 #define QUICK_TAP_MS 175
@@ -199,153 +199,6 @@
         };
 
 
-        /* symbol combos */
-        cb_at {
-            bindings = <&kp AT>;
-            key-positions = <LT3 LM3>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_hash {
-            bindings = <&kp HASH>;
-            key-positions = <LT2 LM2>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_dllr {
-            bindings = <&kp DLLR>;
-            key-positions = <LT1 LM1>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_prcnt {
-            bindings = <&kp PRCNT>;
-            key-positions = <LT0 LM0>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-
-        cb_grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <LM3 LB3>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_bslh {
-            bindings = <&kp BSLH>;
-            key-positions = <LM2 LB2>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <LM1 LB1>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <LM0 LB0>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-
-        cb_caret {
-            bindings = <&kp CARET>;
-            key-positions = <RT0 RM0>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_plus {
-            bindings = <&kp PLUS>;
-            key-positions = <RT1 RM1>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_star {
-            bindings = <&kp STAR>;
-            key-positions = <RT2 RM2>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_amps {
-            bindings = <&kp AMPS>;
-            key-positions = <RT3 RM3>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-
-        cb_under {
-            bindings = <&kp UNDER>;
-            key-positions = <RM0 RB0>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_minus {
-            bindings = <&kp MINUS>;
-            key-positions = <RM1 RB1>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_fslh {
-            bindings = <&kp FSLH>;
-            key-positions = <RM2 RB2>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-        cb_pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <RM3 RB3>;
-            layers = <BASE NUM>;
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-        };
-
-
-        cb_lpar_lt {
-            bindings = <&lpar_lt>;
-            key-positions = <RT1 RT2>;
-            layers = <BASE>;
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-        };
-        cb_rpar_gt {
-            bindings = <&rpar_gt>;
-            key-positions = <RT2 RT3>;
-            layers = <BASE>;
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-        };
-        cb_lbkt {
-            bindings = <&kp LBKT>;
-            key-positions = <RB1 RB2>;
-            layers = <BASE>;
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-        };
-        cb_rbkt {
-            bindings = <&kp RBKT>;
-            key-positions = <RB2 RB3>;
-            layers = <BASE>;
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-        };
-
     };
 
     keymap {
@@ -356,7 +209,7 @@
                            &double_layer FUNC NUM  &kp Q        &kp W        &kp E            &kp R          &kp T                               &kp Y         &kp U              &kp I            &kp O        &kp P          &to SCUT
                            &kp LSHIFT              &hml LGUI A  &hml LALT S  &hml LCTRL D     &hml LSHIFT F  &kp G                               &kp H         &hmr RSHIFT J      &hmr RCTRL K     &hmr RALT L  &hmr RGUI SQT  &swap
                            &smart_shift 0 LSHIFT   &kp Z        &kp X        &kp C            &kp V          &kp B         &kp C_MUTE  &kp C_PP  &kp N         &kp M              &comma_morph     &dot_morph   &qexcl         &smart_shift 0 LSHIFT
-                           &none                   &none        &none        &lt SCUT ESCAPE  &lt NUM SPACE  &lt FUNC TAB                        &lt SCUT RET  &lt NUM BACKSPACE  &lt FUNC DELETE  &none        &none          &none
+                           &none                   &none        &none        &lt SCUT ESCAPE  &lt SYM SPACE  &lt FUNC TAB                        &lt SCUT RET  &lt NUM BACKSPACE  &lt FUNC DELETE  &none        &none          &none
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
                 };
@@ -366,7 +219,7 @@
                         bindings = <
                            &to BASE   &kp N1        &kp N2        &kp N3           &kp N4          &kp N5                           &kp PG_UP  &kp HOME   &kp UP     &kp END          &kp DEL     &kp C_VOLUME_UP
                            &kp DOT    &hml LGUI N6  &hml LALT N7  &hml LCTRL N8    &hml LSHIFT N9  &kp N0                           &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT        &kp CAPS    &kp C_VOLUME_DOWN
-                           &kp LSHFT  &kp PLUS      &kp MINUS     &kp KP_MULTIPLY  &kp FSLH        &kp EQUAL  &kp C_MUTE  &kp C_PP  &kp INS    &kp GRAVE  &kp PSCRN  &kp PAUSE_BREAK  &kp KP_NUM  &kp C_MUTE
+                           &kp LSHFT  &none         &none         &none            &none           &none      &kp C_MUTE  &kp C_PP  &kp INS    &none      &kp PSCRN  &kp PAUSE_BREAK  &kp KP_NUM  &kp C_MUTE
                            &trans     &trans        &trans        &trans           &trans          &trans                           &trans     &trans     &trans     &trans           &trans      &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
@@ -398,8 +251,8 @@
                         display-name = "Scut";
                         bindings = <
                            &to BASE  &none  &none  &none  &none  &none                                &none  &kp C_MUTE  &kp C_VOLUME_UP    &kp C_PP    &none  &to BASE
-                           &none     &none  &none  &none  &none  &kp LG(SPACE)                        &none  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT  &none  &none
-                           &none     &none  &none  &none  &none  &none          &kp C_MUTE  &kp C_PP  &none  &none       &none              &none       &none  &none
+                           &kp LA(SPACE) &none  &none  &none  &none  &kp LG(SPACE)                        &none  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT  &none  &none
+                           &kp LSHIFT &none  &none  &none  &none  &none          &kp C_MUTE  &kp C_PP  &none  &none       &none              &none       &none  &none
                            &none     &none  &none  &none  &none  &none                                &none  &none       &none              &none       &none  &none
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
@@ -409,9 +262,20 @@
                         display-name = "Sys";
                         bindings = <
                            &to BASE        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &none  &kp C_MUTE  &kp C_VOLUME_UP    &kp C_PP    &none  &to BASE
-                           &bt BT_CLR      &none         &none         &none         &none         &none                               &none  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_NEXT  &none  &none
+                           &bt BT_CLR      &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHIFT F &kp G                              &kp H   &hmr RSHIFT J &hmr RCTRL K     &hmr RALT L  &hmr RGUI SQT &none
                            &bt BT_CLR_ALL  &none         &none         &none         &none         &none         &kp C_MUTE  &kp C_PP  &none  &none       &none              &none       &none  &none
                            &none           &none         &none         &none         &none         &none                               &none  &none       &none              &none       &none  &none
+                        >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
+
+                };
+    sym_layer {
+                        display-name = "Sym";
+                        bindings = <
+                           &to BASE   &kp GRAVE  &kp TILDE  &kp AT     &kp HASH   &kp DLLR                      &kp CARET  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR   &trans
+                           &trans     &kp BSLH   &kp PIPE   &kp MINUS  &kp UNDER  &kp EQUAL                     &kp PLUS   &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &trans
+                           &kp LSHFT  &kp EXCL   &kp QMARK  &kp FSLH   &kp LT     &kp GT  &kp C_MUTE  &kp C_PP  &kp SQT    &kp DQT    &kp SEMI   &kp COLON  &kp COMMA  &kp DOT
+                           &trans     &trans     &trans     &trans     &trans     &trans                       &trans     &trans     &trans     &trans     &trans     &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
 
