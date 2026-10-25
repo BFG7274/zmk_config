@@ -209,7 +209,7 @@
                            &double_layer FUNC NUM  &kp Q        &kp W        &kp E            &kp R          &kp T                               &kp Y         &kp U              &kp I            &kp O        &kp P          &to SCUT
                            &kp LSHIFT              &hml LGUI A  &hml LALT S  &hml LCTRL D     &hml LSHIFT F  &kp G                               &kp H         &hmr RSHIFT J      &hmr RCTRL K     &hmr RALT L  &hmr RGUI SQT  &swap
                            &smart_shift 0 LSHIFT   &kp Z        &kp X        &kp C            &kp V          &kp B         &kp C_MUTE  &kp C_PP  &kp N         &kp M              &comma_morph     &dot_morph   &qexcl         &smart_shift 0 LSHIFT
-                           &none                   &none        &none        &lt SCUT ESCAPE  &lt SYM SPACE  &lt FUNC TAB                        &lt SCUT RET  &lt NUM BACKSPACE  &lt FUNC DELETE  &none        &none          &none
+                           &none                   &none        &none        &lt SCUT ESCAPE  &lt NUM SPACE  &mo SYM                        &lt SCUT RET  &lt NUM BACKSPACE  &mo SYM  &none        &none          &none
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
                 };
@@ -271,11 +271,13 @@
                 };
     sym_layer {
                         display-name = "Sym";
+                        // Direct symbols; paired brackets run left to right: {} [] ().
+                        // Home-row holds mirror the modifiers on the base layer.
                         bindings = <
-                           &to BASE   &kp GRAVE  &kp TILDE  &kp AT     &kp HASH   &kp DLLR                      &kp CARET  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR   &trans
-                           &trans     &kp BSLH   &kp PIPE   &kp MINUS  &kp UNDER  &kp EQUAL                     &kp PLUS   &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &trans
-                           &kp LSHFT  &kp EXCL   &kp QMARK  &kp FSLH   &kp LT     &kp GT  &kp C_MUTE  &kp C_PP  &kp SQT    &kp DQT    &kp SEMI   &kp COLON  &kp COMMA  &kp DOT
-                           &trans     &trans     &trans     &trans     &trans     &trans                       &trans     &trans     &trans     &trans     &trans     &trans
+                           &kp TAB    &kp EXCL         &kp LT          &kp GT          &kp AMPS          &kp PIPE                       &kp BSLH   &kp LBRC          &kp RBRC          &kp LBKT       &kp RBKT        &kp AT
+                           &kp DEL    &hml LGUI CARET  &hml LALT MINUS &hml LCTRL PLUS &hml LSHIFT EQUAL &kp STAR                       &kp SEMI   &hmr RSHIFT LPAR  &hmr RCTRL RPAR   &hmr RALT DQT  &hmr RGUI FSLH  &kp BACKSPACE
+                           &kp LSHFT  &kp GRAVE        &kp TILDE       &kp DLLR        &kp HASH          &kp PRCNT  &kp C_MUTE &kp C_PP &kp UNDER  &kp COLON         &kp COMMA         &kp DOT        &kp SQT         &kp QMARK
+                           &none      &none            &none           &kp ESCAPE      &kp SPACE         &trans                         &kp RET    &kp BACKSPACE     &trans            &none          &none           &none
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_PREV C_NEXT>;
 
